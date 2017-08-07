@@ -1,6 +1,8 @@
 buildscript {
 	ext {
 		springBootVersion = '1.5.6.RELEASE'
+        springCoreVersion = '4.3.8.RELEASE'
+        springSecurityVersion = '4.1.4.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -28,5 +30,16 @@ dependencies {
 	compile 'com.jayway.jsonpath:json-path:2.1.0'
 	compile 'org.apache.commons:commons-lang3:3.5'
     compileOnly 'org.projectlombok:lombok:1.16.18'
+    compile "org.springframework:spring-core:$springCoreVersion"
+    compile "org.springframework:spring-web:$springCoreVersion"
+    compile "org.springframework:spring-webmvc:$springCoreVersion"
+    compile "org.springframework:spring-jdbc:$springCoreVersion"
+    compile "org.springframework:spring-aop:$springCoreVersion"
+    compile 'org.springframework.data:spring-data-commons:1.11.4.RELEASE'
+    compile 'org.springframework.data:spring-data-jdbc-core:1.2.1.RELEASE'
+    compile 'org.springframework.data:spring-data-rest-webmvc:2.4.2.RELEASE'
+
+    // https://mvnrepository.com/artifact/javax.validation/validation-api
+    compile group: 'javax.validation', name: 'validation-api', version: '2.0.0.Final'
 
 }
