@@ -12,9 +12,13 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Argument {
 
-    @Getter @Setter private String type;
+    @Getter
+    @Setter
+    protected String type;
 
-    @Getter @Setter private String value;
+    @Getter
+    @Setter
+    protected String value;
 
     @Override
     public String toString() {
